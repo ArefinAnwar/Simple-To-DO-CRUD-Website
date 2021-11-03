@@ -14,16 +14,18 @@ function App() {
     var todo = {
       item: input,
     };
-    const saveToFirebase = firebase.firestore();
-    saveToFirebase
-      .collection("todos")
-      .add({
-        todo,
-      })
-      .then((snapshot) => {
-        todo.id = snapshot.id;
-        snapshot.set(todo);
-      });
+    if (input.trim() !== "") {
+      const saveToFirebase = firebase.firestore();
+      saveToFirebase
+        .collection("todos")
+        .add({
+          todo,
+        })
+        .then((snapshot) => {
+          todo.id = snapshot.id;
+          snapshot.set(todo);
+        });
+    }
   };
   const [todos, setTodos] = React.useState([]);
   const getTodos = () => {
@@ -32,13 +34,14 @@ function App() {
       const saveFirebaseTodos = [];
       querySnapShot.forEach((doc) => {
         saveFirebaseTodos.push(doc.data());
+        
       });
       setTodos(saveFirebaseTodos);
     });
   };
   //saveTodo("Test is succesful");
   const [input, setInput] = React.useState("");
-
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -52,9 +55,10 @@ function App() {
             onChange={(e) => setInput(e.target.value)}
           ></input>
           <button id="addTaskButton" onClick={() => saveTodo(input)}>
-            {/* <h1 id="addTaskButtonText">+</h1> */}
+            <h1 id="addTaskButtonText">+</h1>
           </button>
         </div>
+        
         <div id="todoContainer" style={{ overflowY: "scroll" }}>
           {todos.map((todo) => (
             <TodoCard id={todo.id} text={todo.item} />
