@@ -1,0 +1,96 @@
+#mainCon {
+  height: 10vh;
+  width: 50vw;
+  background-color: #4a4e69;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+#todoText {
+  color: white;
+  padding-left: 3%;
+  padding-left: 3%;
+  font-size: 2vw;
+}
+#deleteTodoIcon {
+  /* position: absolute;
+  right: 2.5vw;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0); */
+  position: absolute;
+  right: 2.5vw;
+  padding: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#deleteTodoIcon:hover {
+  background-color: #fc4545b9;
+  box-shadow: 0px 15px 20px rgba(255, 77, 77, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#deleteTodoIcon:active {
+  transform: translateY(-1px);
+}
+#editTodoIcon {
+  /* position: absolute;
+    right: 8vw;
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0); */
+  position: absolute;
+  right: 8vw;
+  padding: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#editTodoIcon:hover  {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#editTodoIcon:active {
+  transform: translateY(-1px);
+}
+#e {
+  font-size: 3vw;
+  color: #2ee59d;
+}
+#e:hover {
+  font-size: 3vw;
+  color: white;
+}
+#d {
+  font-size: 3vw;
+  color: #fa7575;
+}
+#d:hover {
+  font-size: 3vw;
+  color: white;
+}

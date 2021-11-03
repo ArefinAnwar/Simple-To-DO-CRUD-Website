@@ -1,38 +1,97 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
 }
 
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+input:focus {
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.5vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #22223b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+#heading {
+  font-size: 50px;
+  color: white;
+  font-weight: 300;
+}
+#inputBar {
+  height: 10vh;
+  width: 35vw;
+  background-color: #9a8c98;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#inputTextbox {
+  height: 95%;
+  width: 87%;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 25px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#todoContainer{
+  height: 55vh;
+  width: 51.5vw;
+  /* background-color: white; */
+  position: absolute;
+  bottom: 05vh;
+  align-items: center;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#addTaskButton{
+  content: "+";
+  height: 100%;
+  width: 13%;
+  background-color: #423240;
+  border-radius: 0px 25px 25px 0px;
+  align-items: center;
+  /* justify-content: center; */
+  border-color: rgba(0, 0, 0, 0);
+}
+#addTaskButtonText{
+  color: white;
+  font-size: 30px;
 }
