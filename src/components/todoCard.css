@@ -68,7 +68,7 @@
   cursor: pointer;
   outline: none;
 }
-#editTodoIcon:hover  {
+#editTodoIcon:hover {
   background-color: #2ee59d;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
@@ -93,4 +93,91 @@
 #d:hover {
   font-size: 3vw;
   color: white;
+}
+@media only screen and (max-width: 600px) {
+  #mainCon {
+    height: 10vh;
+    width: 90%;
+    background-color: #4a4e69;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3vh;
+  }
+  #todoText {
+    color: rgb(255, 255, 255);
+    padding-left: 8%;
+    padding-bottom: 1%;
+    font-size: 5vw;
+  }
+  #deleteTodoIcon {
+    position: absolute;
+    right: 12vw;
+    padding: auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  #deleteTodoIcon:hover {
+    background-color: #fc4545b9;
+    box-shadow: 0px 15px 20px rgba(255, 77, 77, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  #deleteTodoIcon:active {
+    transform: translateY(-1px);
+  }
+  #editTodoIcon {
+    position: absolute;
+    right: 24vw;
+    padding: auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  #editTodoIcon:hover {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  #editTodoIcon:active {
+    transform: translateY(-1px);
+  }
+  #e {
+    font-size: 7vw;
+    color: #2ee59d;
+  }
+  #e:hover {
+    font-size: 7vw;
+    color: white;
+  }
+  #d {
+    font-size: 7vw;
+    color: #fa7575;
+  }
+  #d:hover {
+    font-size: 7vw;
+    color: white;
+  }
 }

@@ -13,12 +13,10 @@
 }
 #inputBox {
   /* color: rgb(10, 78, 78); */
-  position: absolute;
-  bottom: 60px;
-  left: 30px;
+  /* position: absolute; */
+  margin-top: 15px;
   width: 80%;
   height: 20%;
-  padding-left: 3%;  
   font-size: 2vw;
   border-radius: 25px;
 }
@@ -28,29 +26,76 @@
   top: -10px;
   content: "x";
   cursor: pointer;
-  
-  
+
   background: #ededed;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  
+
   text-align: center;
   border: 1px solid #999;
-  font-size: 20px;
-  
+  font-size: 16px;
 }
-#popupHeading{
+#popupHeading {
   font-size: 20px;
   color: white;
   font-weight: 500;
 }
-#popupUpdateTodoButton{
-  position: absolute;
-  width: 6vw;
+#popupUpdateTodoButton {
+  width: 10vw;
   height: 6vh;
-  bottom: 10px;
-  left:170px;
-  font-size: 1vw;
+  margin-top: 15px;
+  border-radius: 25px;
+  background-color: #5b4491;
+  border: none;
+  align-items: center;
+  justify-content: center;
 }
-
+#popupUpdateTodoButtonText{
+  font-size: 1vw;
+  color: white;
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+  .popup-box {
+    position: fixed;
+    background: #00000071;
+    width: 70vw;
+    height: 30vh;
+    top: 40vh;
+    left: 15vw;
+    z-index: 2;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #inputBox {
+    /* color: rgb(10, 78, 78); */
+    /* position: absolute; */
+    margin-top: 15px;
+    width: 80%;
+    height: 20%;
+    font-size: 4vw;
+    border-radius: 25px;
+    padding-left: 6%;
+    padding-right: 6%;
+    border: none;
+  }
+  #popupUpdateTodoButton {
+    width: 30vw;
+    height: 6vh;
+    margin-top: 15px;
+    border-radius: 25px;
+    background-color: #5b4491;
+    border: none;
+    align-items: center;
+    justify-content: center;
+  }
+  #popupUpdateTodoButtonText{
+    font-size: 3vw;
+    color: white;
+    font-weight: 700;
+  }
+}

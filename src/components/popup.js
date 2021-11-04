@@ -28,7 +28,7 @@ function Popup(props) {
           ></input>
         </>
                 
-        <button onClick={updateTodo} id = "popupUpdateTodoButton"><span >Update</span></button>
+        <button onClick={updateTodo} id = "popupUpdateTodoButton"><span id = "popupUpdateTodoButtonText">Update</span></button>
       
     </div>
   );

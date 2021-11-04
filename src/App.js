@@ -24,6 +24,7 @@ function App() {
         .then((snapshot) => {
           todo.id = snapshot.id;
           snapshot.set(todo);
+          setInput("");
         });
     }
   };
